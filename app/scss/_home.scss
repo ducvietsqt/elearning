@@ -181,6 +181,24 @@
 
   }
 }
+.card-text--rating {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  .rating {
+    display: flex;
+    align-items: center;
+  }
+  .point {
+    font-size: 12px;
+    margin: 5px 0px 0px 0px;
+    color: #888888;
+  }
+  .price {
+    font-size: 20px;
+  }
+}
 
 .item_vid {
   //border: solid 1px red;
