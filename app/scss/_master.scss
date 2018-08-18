@@ -350,6 +350,8 @@
     .breadcrumb-item {
       font-size: 15px;
       color: #9b9b9b;
+      display: flex;
+      align-items: center;
       a {
         font-size: 15px;
         color: #9b9b9b;
