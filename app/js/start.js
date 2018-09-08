@@ -7,8 +7,18 @@ $(document).ready(function() {
     $('.list_members').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
-        infinite: false
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
     });
+    $('.list_slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
+    });
+
     $(function () {
         $('[data-toggle="popover"]').popover()
     });
