@@ -1,4 +1,5 @@
 
+
 $(document).ready(function() {
     $('#carouselGallery').on('select', function (evt, index) {
         console.log('item selected : ' + index, evt);
@@ -18,10 +19,41 @@ $(document).ready(function() {
         autoplay: true,
         autoplaySpeed: 4000,
     });
-
+    var templatePopover = '<div class="popover popover-card" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>';
+    var templatePopoverUser = '<div class="popover popover-auth" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>';
     $(function () {
-        $('[data-toggle="popover"]').popover()
+        $('[data-toggle="popover"].card').popover({
+            trigger: 'manual',
+            placement: 'right',
+            delay: {show: 50, hide: 400},
+            template: templatePopover,
+            animation: false,
+            content: $(this).find('.add_card')[0]
+
+        }).on("mouseenter", function (_e) {
+            var _this = this;
+            $(this).popover("show");
+
+        }).on("mouseleave", function () {
+            var _this = this;
+            setTimeout(function () {
+                if (!$(".popover:hover").length) {
+                    $(_this).popover("hide")
+                }
+            }, 100);
+        });
+
+        $('.user_authenticated .avatar').popover({
+            trigger: 'click',
+            placement: 'bottom',
+            content: $('.list_menu_profile')[0],
+            animation: false,
+            template: templatePopoverUser,
+        })
+
     });
+
+
     var wow = new WOW(
         {
             boxClass:     'wow',      // animated element css class (default is wow)
