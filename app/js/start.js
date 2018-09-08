@@ -28,7 +28,29 @@ $(document).ready(function() {
         }
     );
     wow.init();
+    $('#file_topic').on('change', function (e) {
+        handleFileSelect(e, function (avatar, file) {
+            $('.pic_file_topic').addClass('hasAvatar');
+            $('.img_avt_topic').attr('src', avatar);
+        })
+    })
 });
+var handleFileSelect = function(event, callback) {
+    var files = event.target.files;
+    var file = files[0];
+    if (files && file) {
+        var reader = new FileReader();
+        var binaryString = "";
+        // Show preview avatar
+        reader.onload = function (readerEvt) {
+            binaryString = readerEvt.target.result;
+            var avatar = "data:image/jpeg;base64," + btoa(binaryString);
+            if (callback && typeof callback === "function") return callback(avatar, file);
+        };
+        reader.readAsBinaryString(file);
+    }
+    return file;
+};
 
 var isMobile = {
     Android: function() {
