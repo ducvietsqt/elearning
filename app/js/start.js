@@ -28,10 +28,13 @@ $(document).ready(function() {
         }
     );
     wow.init();
-    $('#file_topic').on('change', function (e) {
+    $('.file_input_pic').on('change', function (e) {
+        var target = this;
         handleFileSelect(e, function (avatar, file) {
-            $('.pic_file_topic').addClass('hasAvatar');
-            $('.img_avt_topic').attr('src', avatar);
+            $(target).parent().addClass('hasAvatar');
+            $(target).parent().find('.pic_thumb_file').attr('src', avatar);
+            // $('.pic_file_topic').addClass('hasAvatar');
+            // $('.img_avt_topic').attr('src', avatar);
         })
     })
 });

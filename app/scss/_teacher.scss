@@ -37,3 +37,10 @@
 .full-height {
   height: 100%;
 }
+.pic_file_topic {
+  &.radius {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+  }
+}
