@@ -152,6 +152,11 @@
   cursor: pointer;
   z-index: 999;
 }
+.list-slider-book {
+  .slick-prev, .slick-next {
+    background: url("../images/arr.png") no-repeat center;
+  }
+}
 
 .slick-prev {
   //arr_left.png
