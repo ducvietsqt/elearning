@@ -183,10 +183,10 @@
                         </ul>
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                <form class="form-auth">
+                                <form class="form-auth" id="form_coach_learn">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" aria-describedby="emailHelp"
-                                               placeholder="Tên khóa học">
+                                        <input type="text" name="full_name" class="form-control" aria-describedby="emailHelp"
+                                               placeholder="Tên khóa học" required>
                                         <!--<small id="emailHelp" class="form-text text-muted">
 
                                         </small>-->
@@ -194,26 +194,30 @@
                                     <div class="form-group">
                                         <div class="pic_file_topic">
                                             <span>Chọn hình ảnh</span>
-                                            <input class="file_input_pic" type="file">
-                                            <img src="images" alt="" class="pic_thumb_file">
+                                            <input class="file_input_pic" name="avatar" type="file" required>
+                                            <div class="pic_file_topic--avatar">
+                                                <img src="images" alt="" class="pic_thumb_file">
+                                            </div>
 
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <input type="number" class="form-control" placeholder="Giá tiền">
+                                        <input type="number" name="price" min="0" class="form-control" placeholder="Giá tiền" required>
                                         <!--<small id="emailHelp" class="form-text text-muted">
 
                                         </small>-->
                                     </div>
                                     <div class="form-group">
-                                        <textarea class="form-control" rows="4"
-                                                  placeholder="Giới thiệu ngắn về bản thân">Mô tả</textarea>
+                                        <textarea class="form-control" name="info" rows="4"
+                                                  placeholder="Mô tả" required></textarea>
                                         <!--<small id="emailHelp" class="form-text text-muted">
 
                                         </small>-->
                                     </div>
                                     <div class="form-group form-group--flex">
-                                        <input type="number" class="form-control" placeholder="Số luợng học viên"/>
+                                        <div class="input_info">
+                                            <input type="number" name="quatity" min="1" class="form-control" placeholder="Số luợng học viên" required>
+                                        </div>
                                         <div class="card-text card-text--rating card-text--flex">
                                             <p class="point">Đánh giá</p>
                                             <p class="rating">
@@ -228,12 +232,13 @@
                                     </div>
                                     <button type="submit" class="btn btn-primary btn--full">lưu</button>
                                 </form>
+
                             </div>
                             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                <form class="form-auth">
+                                <form class="form-auth" id="form_khoahoc">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" aria-describedby="emailHelp"
-                                               placeholder="Tên môn học">
+                                        <input type="text" class="form-control" name="full_name" aria-describedby="emailHelp"
+                                               placeholder="Tên môn học" required>
                                         <!--<small id="emailHelp" class="form-text text-muted">
 
                                         </small>-->
@@ -241,13 +246,15 @@
                                     <div class="form-group">
                                         <div class="pic_file_topic">
                                             <span>Chọn hình ảnh</span>
-                                            <input class="file_input_pic" type="file">
-                                            <img src="images" alt="" class="pic_thumb_file">
+                                            <input class="file_input_pic" name="avatar" type="file" required>
+                                            <div class="pic_file_topic--avatar">
+                                                <img src="images" alt="" class="pic_thumb_file">
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <textarea class="form-control" rows="4"
-                                                  placeholder="Giới thiệu ngắn về bản thân">Mô tả</textarea>
+                                        <textarea class="form-control" rows="4" name="info"
+                                                  placeholder="Mô tả" required></textarea>
                                         <!--<small id="emailHelp" class="form-text text-muted">
 
                                         </small>-->
@@ -257,10 +264,10 @@
                                 </form>
                             </div>
                             <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                                <form class="form-auth">
+                                <form class="form-auth" id="form_create_subjects">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" aria-describedby="emailHelp"
-                                               placeholder="Tên bài học">
+                                        <input type="text" class="form-control" name="full_name" aria-describedby="emailHelp"
+                                               placeholder="Tên bài học" required>
                                         <!--<small id="emailHelp" class="form-text text-muted">
 
                                         </small>-->
@@ -268,19 +275,21 @@
                                     <div class="form-group">
                                         <div class="pic_file_topic">
                                             <span>Chọn hình ảnh</span>
-                                            <input class="file_input_pic" type="file">
-                                            <img src="images" alt="" class="pic_thumb_file">
+                                            <input class="file_input_pic" name="avatar" type="file" required>
+                                            <div class="pic_file_topic--avatar">
+                                                <img src="images" alt="" class="pic_thumb_file">
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <textarea class="form-control" rows="4"
-                                                  placeholder="Giới thiệu ngắn về bản thân">Mô tả</textarea>
+                                                  placeholder="Giới thiệu ngắn về bản thân" name="info" required>Mô tả</textarea>
                                         <!--<small id="emailHelp" class="form-text text-muted">
 
                                         </small>-->
                                     </div>
                                     <div class="form-group">
-                                        <select class="custom-select" required>
+                                        <select class="custom-select" name="question_type" required>
                                             <option value="">Nội dung - ( Text, ppt, pdf, word, Interactive Video, live
                                                 st)
                                             </option>
@@ -293,11 +302,12 @@
                                 </form>
                             </div>
                             <div class="tab-pane fade" id="nganhang" role="tabpanel" aria-labelledby="contact-tab">
-                                <form class="form-auth">
+                                <form class="form-auth" id="form_questions">
                                     <div class="form-group">
                                         <input type="text" class="form-control"
                                                id="txt_input_phone"
-                                               aria-describedby="emailHelp" placeholder="Nội dung câu hỏi">
+                                               name="full_name"
+                                               aria-describedby="emailHelp" placeholder="Nội dung câu hỏi" required>
                                         <!--<small id="emailHelp" class="form-text text-muted">
 
                                         </small>-->
@@ -308,13 +318,14 @@
                                 <textarea class="form-control"
                                           id="txt_input_introduce"
                                           rows="4"
-                                          placeholder="Giới thiệu ngắn về bản thân">Nội dung câu trả lời</textarea>
+                                          name="info"
+                                          placeholder="Giới thiệu ngắn về bản thân" required>Nội dung câu trả lời</textarea>
                                         <!--<small id="emailHelp" class="form-text text-muted">
 
                                         </small>-->
                                     </div>
                                     <div class="form-group">
-                                        <select class="custom-select" required>
+                                        <select class="custom-select" name="qs_type" required>
                                             <option value="">Danh mục câu hỏi</option>
                                             <option value="1">Câu 1</option>
                                             <option value="2">Câu 2</option>
@@ -322,7 +333,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <select class="custom-select" required>
+                                        <select class="custom-select" name="qs_cate" required>
                                             <option value="">Danh mục chủ đề</option>
                                             <option value="1">Câu 1</option>
                                             <option value="2">Câu 2</option>
@@ -330,7 +341,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <select class="custom-select" required>
+                                        <select class="custom-select" name="qs_time" required>
                                             <option value="">Thời gian làm bài</option>
                                             <option value="1">Câu 1</option>
                                             <option value="2">Câu 2</option>
@@ -414,6 +425,8 @@
 
 <!--build:js js/start.js -->
 <script src="js/jquery.js"></script>
+<script src="js/jquery.validate.js"></script>
+
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.resize.js"></script>

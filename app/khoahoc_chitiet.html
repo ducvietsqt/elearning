@@ -110,22 +110,22 @@
                             <div class="social-auth">
                                 <a href="#"><img src="images/link.png" alt=""></a>
                                 <a href="#"><img src="images/face.png" alt=""></a>
-                                <a href="#"><img src="images/gg.png" alt=""></a>
+                                <a href="#"><img src="images/gg_plus.png" alt=""></a>
                             </div>
                             <p class="line_middle"><span>Hoặc</span></p>
                         </div>
 
-                        <form class="form-auth">
+                        <form class="form-auth" id="form_signin">
                             <div class="form-group">
                                 <input type="email" class="form-control"
-                                       id="txt_input_signin_email" placeholder="Email">
+                                       id="txt_input_signin_email" placeholder="Email" name="email" required>
                                 <!--<small id="emailHelp" class="form-text text-muted">
 
                                 </small>-->
                             </div>
                             <div class="form-group">
                                 <input type="password" class="form-control"
-                                       id="txt_input_signin_password" placeholder="Password">
+                                       id="txt_input_signin_password" placeholder="Password" name="password" required>
                                 <!--<small id="emailHelp" class="form-text text-muted">
 
                                 </small>-->
@@ -175,20 +175,20 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form class="form-auth">
+                        <form class="form-auth" id="form-signup">
                             <div class="row">
                                 <div class="col-sm">
                                     <div class="form-group">
                                         <input type="text" class="form-control"
                                                id="txt_input_name"
-                                               aria-describedby="emailHelp" placeholder="Họ & Tên">
+                                               aria-describedby="emailHelp" placeholder="Họ & Tên" name="full_name" required>
                                         <!--<small id="emailHelp" class="form-text text-muted">
                                         </small>-->
                                     </div>
                                 </div>
                                 <div class="col-sm">
                                     <div class="form-group">
-                                        <select class="custom-select" required>
+                                        <select class="custom-select"  name="gender" required>
                                             <option value="">Giới Tính</option>
                                             <option value="1">Nam</option>
                                             <option value="2">Nữ</option>
@@ -202,28 +202,28 @@
                             <div class="form-group">
                                 <input type="text" class="form-control"
                                        id="txt_input_phone"
-                                       aria-describedby="emailHelp" placeholder="Số Điện Thoại">
+                                       aria-describedby="emailHelp" placeholder="Số Điện Thoại"  name="phone_number" required>
                                 <!--<small id="emailHelp" class="form-text text-muted">
 
                                 </small>-->
                             </div>
                             <div class="form-group">
                                 <input type="email" class="form-control"
-                                       id="txt_input_email" placeholder="Email">
+                                       id="txt_input_email" placeholder="Email"  name="email" required>
                                 <!--<small id="emailHelp" class="form-text text-muted">
 
                                 </small>-->
                             </div>
                             <div class="form-group">
                                 <input type="date" class="form-control"
-                                       id="txt_input_date" placeholder="Ngày sinh">
+                                       id="txt_input_date" placeholder="Ngày sinh"  name="date_of_birth" required>
                                 <!--<small id="emailHelp" class="form-text text-muted">
 
                                 </small>-->
                             </div>
                             <div class="form-group">
                                 <textarea class="form-control"
-                                          id="txt_input_adress" placeholder="Địa Chỉ">Địa Chỉ</textarea>
+                                          id="txt_input_adress" placeholder="Địa Chỉ"  name="address" required></textarea>
                                 <!--<small id="emailHelp" class="form-text text-muted">
 
                                 </small>-->
@@ -231,7 +231,7 @@
                             <div class="row">
                                 <div class="col-sm">
                                     <div class="form-group">
-                                        <select class="custom-select" required>
+                                        <select class="custom-select" name="district" required>
                                             <option value="">Quận/Huyện</option>
                                             <option value="1">Tân Bình</option>
                                             <option value="2">Thủ Đức</option>
@@ -241,7 +241,7 @@
                                 </div>
                                 <div class="col-sm">
                                     <div class="form-group">
-                                        <select class="custom-select" required>
+                                        <select class="custom-select" name="provin" required>
                                             <option value="">Tỉnh/Thành Phố</option>
                                             <option value="1">Hồ Chí Minh</option>
                                             <option value="2">Hà Nội</option>
@@ -257,7 +257,7 @@
                                 <textarea class="form-control"
                                           id="txt_input_introduce"
                                           rows="4"
-                                          placeholder="Giới thiệu ngắn về bản thân">Giới thiệu ngắn về bản thân</textarea>
+                                          placeholder="Giới thiệu ngắn về bản thân" name="info" required></textarea>
                                 <!--<small id="emailHelp" class="form-text text-muted">
 
                                 </small>-->
@@ -866,6 +866,8 @@
 
 <!--build:js js/start.js -->
 <script src="js/jquery.js"></script>
+<script src="js/jquery.validate.js"></script>
+
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.resize.js"></script>

@@ -78,7 +78,51 @@ $(document).ready(function() {
             // $('.pic_file_topic').addClass('hasAvatar');
             // $('.img_avt_topic').attr('src', avatar);
         })
-    })
+    });
+    // TODO: validate form
+    $('#form_coach_learn').validate();
+    $('#form-signup').validate();
+    $('#form_signin').validate();
+    $('#form_khoahoc').validate();
+    $('#form_create_subjects').validate();
+    $('#form_questions').validate();
+    var validator = $("#form-profile-teacher").validate({
+        // ignore: ".binding_name",
+        rules: {
+            avatar: {
+                // required: true
+            },
+            fullname: {
+                required: true
+            },
+            gender: {
+                required: true
+            },
+            date_of_birth: {
+                required: true
+            },
+            address: {
+                required: true
+            },
+            "phone_number": {
+                number: true,
+                minlength: 8,
+                required: true,
+                // maxlength: 8,
+            },
+            "email": {
+                required: true,
+                email: true
+            }
+        },
+        messages: {
+            email: {
+                // email: 'dkm'
+            }
+        }
+    });
+
+
 });
 var handleFileSelect = function(event, callback) {
     var files = event.target.files;
