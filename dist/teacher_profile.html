@@ -8,7 +8,9 @@
     <title>Els</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400,700,700i&amp;subset=vietnamese"
           rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
@@ -31,10 +33,67 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <div class="my-2 my-lg-0 mr-auto">
                         <div class="d-flex justify-content-start">
-                            <button class="btn btn_flex">
-                                <img src="images/icon_danhmuc.png" alt=""/>
-                                Danh mục
-                            </button>
+                            <div class="dropdown_cate">
+                                <button class="dropbtn btn btn_flex">
+                                    <img src="images/icon_danhmuc.png" alt=""/>
+                                    Danh mục
+                                </button>
+                                <div class="dropdown-content">
+                                    <div class="pos-relative">
+                                        <div class="menu_learn_cate">
+                                            <div class="item">
+                                                <a class="active" href="#">
+                                                    Development
+                                                    <i class="fas fa-angle-right"></i>
+                                                </a>
+                                                <div class="menu_learn_cate">
+                                                    <div class="item">
+                                                        <a class="active" href="#">
+                                                            Development
+                                                        </a>
+                                                    </div>
+                                                    <div class="item">
+                                                        <a href="#">Music</a>
+                                                    </div>
+                                                    <div class="item">
+                                                        <a href="#">Design</a>
+                                                    </div>
+                                                    <div class="item">
+                                                        <a href="#">Art</a>
+                                                    </div>
+                                                    <div class="item">
+                                                        <a href="#">Games</a>
+                                                    </div>
+                                                    <div class="item">
+                                                        <a href="#">UI/UX</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <a href="#">Music<i class="fas fa-angle-right"></i></a>
+                                            </div>
+                                            <div class="item">
+                                                <a href="#">Design<i class="fas fa-angle-right"></i></a>
+                                            </div>
+                                            <div class="item">
+                                                <a href="#">Art<i class="fas fa-angle-right"></i></a>
+                                            </div>
+                                            <div class="item">
+                                                <a href="#">Games<i class="fas fa-angle-right"></i></a>
+                                            </div>
+                                            <div class="item">
+                                                <a href="#">Art<i class="fas fa-angle-right"></i></a>
+                                            </div>
+                                            <div class="item">
+                                                <a href="#">Games<i class="fas fa-angle-right"></i></a>
+                                            </div>
+                                            <div class="item">
+                                                <a href="#">UI/UX</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <form class="form-inline form_search">
                                 <input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm khoá học"
                                        aria-label="Search">
