@@ -35,11 +35,19 @@
 // partner
 .partner_items {
   //border: solid 1px red;
-  display: flex;
+  //display: flex;
   //flex-wrap: wrap;
   justify-content: space-around;
+  padding: 0px 30px;
+  .slick-list {
+    //display: flex;
+  }
   .item {
     //border: solid 1px blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
   }
 }
 

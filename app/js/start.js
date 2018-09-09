@@ -26,6 +26,14 @@ $(document).ready(function() {
         autoplay: true,
         autoplaySpeed: 4000,
     });
+    $('.partner_items').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+    });
+
 
     var templatePopover = '<div class="popover popover-card" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>';
     var templatePopoverUser = '<div class="popover popover-auth" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>';
