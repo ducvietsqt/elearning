@@ -17,8 +17,16 @@ $(document).ready(function() {
         slidesToScroll: 1,
         infinite: true,
         autoplay: true,
+        autoplaySpeed: 2500,
+    });
+    $('.list-slider-book').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        autoplay: true,
         autoplaySpeed: 4000,
     });
+
     var templatePopover = '<div class="popover popover-card" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>';
     var templatePopoverUser = '<div class="popover popover-auth" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>';
     $(function () {
