@@ -102,6 +102,7 @@ $(document).ready(function() {
     $('#form_khoahoc').validate();
     $('#form_create_subjects').validate();
     $('#form_questions').validate();
+    $('#form-profile-comunity').validate();
     var validator = $("#form-profile-teacher").validate({
         // ignore: ".binding_name",
         rules: {

@@ -1,0 +1,132 @@
+.item_comunity {
+  border-bottom: solid 1px #e8e9eb;
+  padding-bottom: 25px;
+  padding-left: 30px;
+  margin-bottom: 30px;
+  .question-ders {
+    color: #666666;
+    font-size: 15px;
+    margin: 0px;
+    font-weight: bold;
+    * {
+      margin: 0px;
+    }
+  }
+  .comment-qs {
+    //border: solid 1px red;
+    padding-left: 60px;
+    margin-top: 10px;
+    &--ders {
+      font-size: 15px;
+      color: #666666;
+
+      ._text {
+
+      }
+      ._report {
+        //border: solid 1px red;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 20px;
+        a {
+          color: #09a6e0;
+          font-size: 15px;
+        }
+        & > * {
+          margin: 0px 5px;
+          display: block;
+        }
+        .items-social {
+          //border: solid 1px red;
+          display: flex;
+          align-items: center;
+          a {
+            margin: 0px 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.line_comment {
+  //border: solid 1px red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 1px #09a6e0;
+  margin-bottom: 10px;
+  &.border-gray {
+    border-bottom: solid 1px #e8e9eb;
+  }
+  .item {
+    //border: solid 1px blue;
+  }
+  .box-coach {
+    margin: 0px 0px 0px -30px;
+    .coach_author {
+      img {
+        width: 25px;
+        height: 25px;
+      }
+    }
+    .info {
+      padding-left: 5px;
+      .name {
+        color: #666666;
+        font-size: 15px;
+      }
+    }
+  }
+  .color_gray {
+    font-size: 13px;
+    color: #666666;
+    text-transform: uppercase;
+    a {
+      color: #09a6e0;
+    }
+  }
+}
+
+.d-flex {
+  &--forum {
+    margin-bottom: 30px;
+  }
+}
+.title_form {
+  font-size: 20px;
+  color: #09a6e0;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.shadow-box--list {
+  list-style-position: inside;
+  padding: 0px;
+  &.flex {
+    .item {
+      a {
+        display: flex;
+        justify-content: space-between;
+        span:first-child {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  .item {
+    //border: solid 1px red;
+    margin-bottom: 20px;
+    border-bottom: solid 1px #e8e9eb;
+    padding-bottom: 15px;
+    &:last-child {
+      margin-bottom: 0px;
+      border-bottom: none;
+    }
+    a {
+      color: #666666;
+      font-size: 15px;
+    }
+  }
+}
