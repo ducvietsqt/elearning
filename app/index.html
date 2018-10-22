@@ -110,7 +110,7 @@
                         <li class="nav-item active">
                             <a class="nav-link" href="#">
                                 <img src="images/icon_lock.png" alt=""/>
-                                Kích hoạt khoá học
+                                <span class="desktop-ls">Kích hoạt khoá học</span>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -130,15 +130,43 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                đăng ký
+                            <a class="nav-link link-modal" href="#" data-toggle="modal" data-target="#modal_page_signup">
+                                Đăng ký
+                            </a>
+                            <a class="nav-link link-modal" href="#" data-toggle="modal" data-target="#modal_page_signin">
+                                Đăng nhập
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                đăng nhập
+                        <!--<li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="modal" data-target="#modal_page_signin">
+                                Đăng nhập
                             </a>
-                        </li>
+                        </li>-->
+                        <!--<li class="nav-item">
+                            <div class="user_authenticated">
+                                <p class="username">Jenifer</p>
+                                <div class="avatar" data-toggle="popover" data-html=true>
+                                    <img src="images/avt.png" alt="">
+                                </div>
+                                <div class="list_menu_profile">
+                                    <div class="item">
+                                        <a class="active" href="#">Thông tin cá nhân</a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="#">Khóa học đã đăng ký</a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="#">Lịch học</a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="#">Kết quả kiểm tra</a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="#">Thoát</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>-->
                     </ul>
 
                 </div>
@@ -1044,7 +1072,185 @@
         </div>
     </div>
 </div>
+<div class="modal fade" id="modal_page_signin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog--page" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title modal-title--page" id="exampleModalLabel">
+                    <span>Đăng nhập</span>
+                </h5>
+                <button type="button" class="close close--modal" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">
+                                <img src="images/close.png" alt="">
+                            </span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="box-auth-social">
+                    <p class="title-auth-small">Đăng nhập thông qua tài khoản</p>
+                    <div class="social-auth">
+                        <a href="#"><img src="images/link.png" alt=""></a>
+                        <a href="#"><img src="images/face.png" alt=""></a>
+                        <a href="#"><img src="images/gg_plus.png" alt=""></a>
+                    </div>
+                    <p class="line_middle"><span>Hoặc</span></p>
+                </div>
 
+                <form class="form-auth" id="form_signin">
+                    <div class="form-group">
+                        <input type="email" class="form-control"
+                               id="txt_input_signin_email" placeholder="Email" name="email" required>
+                        <!--<small id="emailHelp" class="form-text text-muted">
+
+                        </small>-->
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control"
+                               id="txt_input_signin_password" placeholder="Password" name="password" required>
+                        <!--<small id="emailHelp" class="form-text text-muted">
+
+                        </small>-->
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm">
+                                <div class="form-check form-check--custom">
+                                    <input class="form-check-input check-custom" type="checkbox" id="inlineFormCheck">
+                                    <label class="form-check-label" for="inlineFormCheck">
+                                        <div class="mark_check">
+                                            <span class="mark_check--active"></span>
+                                        </div>
+                                        Duy trì đăng nhập
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm">
+                                <p class="text-right">Quên mật khẩu?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn--full">Đăng nhập</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal_page_signup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog--page" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title modal-title--page">
+                    <span>Đăng ký</span>
+                </h5>
+                <p class="modal-title modal-title--small">
+                    Vui lòng điền đầy đủ thông tin vào các ô trống.
+                </p>
+                <button type="button" class="close close--modal" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">
+                                <img src="images/close.png" alt="">
+                            </span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="form-auth" id="form-signup">
+                    <div class="row">
+                        <div class="col-sm">
+                            <div class="form-group">
+                                <input type="text" class="form-control"
+                                       id="txt_input_name"
+                                       aria-describedby="emailHelp" placeholder="Họ & Tên" name="full_name" required>
+                                <!--<small id="emailHelp" class="form-text text-muted">
+                                </small>-->
+                            </div>
+                        </div>
+                        <div class="col-sm">
+                            <div class="form-group">
+                                <select class="custom-select"  name="gender" required>
+                                    <option value="">Giới Tính</option>
+                                    <option value="1">Nam</option>
+                                    <option value="2">Nữ</option>
+                                    <option value="3">Thủ Đức</option>
+                                </select>
+                                <!--<small id="emailHelp" class="form-text text-muted">
+                                </small>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control"
+                               id="txt_input_phone"
+                               aria-describedby="emailHelp" placeholder="Số Điện Thoại"  name="phone_number" required>
+                        <!--<small id="emailHelp" class="form-text text-muted">
+
+                        </small>-->
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control"
+                               id="txt_input_email" placeholder="Email"  name="email" required>
+                        <!--<small id="emailHelp" class="form-text text-muted">
+
+                        </small>-->
+                    </div>
+                    <div class="form-group">
+                        <input type="date" class="form-control"
+                               id="txt_input_date" placeholder="Ngày sinh"  name="date_of_birth" required>
+                        <!--<small id="emailHelp" class="form-text text-muted">
+
+                        </small>-->
+                    </div>
+                    <div class="form-group">
+                                <textarea class="form-control"
+                                          id="txt_input_adress" placeholder="Địa Chỉ"  name="address" required></textarea>
+                        <!--<small id="emailHelp" class="form-text text-muted">
+
+                        </small>-->
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <div class="form-group">
+                                <select class="custom-select" name="district" required>
+                                    <option value="">Quận/Huyện</option>
+                                    <option value="1">Tân Bình</option>
+                                    <option value="2">Thủ Đức</option>
+                                    <option value="3">Quận 1</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm">
+                            <div class="form-group">
+                                <select class="custom-select" name="provin" required>
+                                    <option value="">Tỉnh/Thành Phố</option>
+                                    <option value="1">Hồ Chí Minh</option>
+                                    <option value="2">Hà Nội</option>
+                                    <option value="3">Đà Nẵng</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!--<small id="emailHelp" class="form-text text-muted">
+
+                        </small>-->
+                    </div>
+                    <div class="form-group">
+                                <textarea class="form-control"
+                                          id="txt_input_introduce"
+                                          rows="4"
+                                          placeholder="Giới thiệu ngắn về bản thân" name="info" required></textarea>
+                        <!--<small id="emailHelp" class="form-text text-muted">
+
+                        </small>-->
+                    </div>
+                    <button type="submit" class="btn btn-primary btn--full">Đăng Ký</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
 <!--build:js js/start.js -->
 <script src="js/jquery.js"></script>
 <script src="js/jquery.validate.js"></script>

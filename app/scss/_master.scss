@@ -1,3 +1,6 @@
+#page {
+  overflow-x: hidden;
+}
 ._disabled {
   //pointer-events: none;
   cursor: not-allowed;
@@ -41,8 +44,31 @@
   img {
     margin-right: 10px;
   }
+  @media (max-width: 991px) {
+    padding-left: 0px;
+  }
 }
-
+.header {
+  .d-flex.justify-content-start {
+    @media (max-width: 991px) {
+      flex-wrap: wrap;
+    }
+  }
+  .form_search {
+    @media(max-width: 991px) {
+      //border: solid 1px red;
+      //flex: 1;
+      width: 100%;
+    }
+  }
+  .navbar-light .navbar-toggler {
+    @media(max-width: 991px) {
+      border-color: red;
+      border: none;
+      padding: 0px;
+    }
+  }
+}
 .form_search {
   //border: solid 1px red;
   background: #f2f3f5;
@@ -64,7 +90,20 @@
 }
 
 .nav_head {
+  @media(max-width: 991px){
+    //border: solid 1px red;
+    flex-direction: row;
+    margin: 0px -10px;
+    flex-wrap: wrap;
+  }
   .nav-item {
+    //border: solid 1px red;
+    display: flex;
+    align-items: center;
+
+    @media(max-width: 991px) {
+      margin: 0px 10px;
+    }
     &:last-child {
       .nav-link {
         padding-right: 0px;
@@ -75,6 +114,11 @@
       display: flex;
       align-items: center;
       height: 100%;
+      &.link-modal {
+        //border: solid 1px red;
+        //padding: 0px 5px;
+        margin-right: 10px;
+      }
       img {
         margin-right: 5px;
       }
@@ -95,11 +139,17 @@
       font-size: 28px;
       color: #fefefe;
       margin-bottom: 10px;
+      @media(max-width: 767px) {
+        font-size: 18px;
+      }
     }
     &--thumb {
       //border: solid 1px gold;
       max-width: 450px;
       width: 100%;
+      @media(max-width: 767px) {
+        max-width: 310px;
+      }
     }
   }
 }
@@ -177,18 +227,40 @@
     //border: solid 1px blue;
     display: flex;
     margin: 0px -15px;
+    @media(max-width: 767px) {
+      flex-wrap: wrap;
+      padding-top: 30px;
+    }
     .item {
       //border: solid 1px red;
       width: 25%;
       padding: 80px 15px 30px 15px;
+      @media(max-width: 991px) {
+        padding-top: 30px;
+      }
+      @media(max-width: 767px) {
+        width: 33.3333%;
+        padding: 0px 15px !important;
+        margin-bottom: 30px;
+      }
+      @media(max-width: 575px) {
+        width: 100%;
+      }
+
       &:nth-child(2) {
         padding-left: 50px;
+        @media(max-width: 991px) {
+          padding-left: 15px;
+        }
       }
       .title {
         color: #ffffff;
         font-size: 20px;
         text-transform: uppercase;
         margin-bottom: 20px;
+        @media(max-width: 575px) {
+          text-align: center;
+        }
       }
       .link_map {
         font-size: 15px;
@@ -198,12 +270,19 @@
         margin-bottom: 15px;
         display: flex;
         align-items: center;
+        @media(max-width: 575px) {
+          justify-content: center;
+        }
         img {
           margin-right: 10px;
         }
       }
       &--logo {
         padding: 30px 0px 0px 0px;
+        @media(max-width: 767px) {
+          order: 1;
+          width: 100%;
+        }
         .logo_foo {
           margin: 0 auto;
           display: block;
@@ -223,6 +302,11 @@
       }
       .logo_Trade {
         margin-top: 30px;
+        img {
+          @media(max-width: 575px) {
+            margin: 0 auto;
+          }
+        }
       }
     }
   }
@@ -407,6 +491,9 @@
   align-items: center;
   cursor: pointer;
   margin-left: 20px;
+  @media(max-width: 575px) {
+    margin-left: 0px;
+  }
   >* {
     &:first-child {
       margin-right: 5px;
