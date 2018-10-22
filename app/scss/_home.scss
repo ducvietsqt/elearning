@@ -257,6 +257,7 @@
   &--block {
     //border: solid 1px red;
     margin: 0px;
+
     .card {
       all: unset;
       position: relative;
@@ -266,6 +267,10 @@
       margin-bottom: 20px;
       padding-bottom: 15px;
       border-bottom: 1px #e8e9eb solid;
+      @media(max-width: 575px) {
+        //border: solid 1px red;
+        flex-wrap: wrap;
+      }
       &:last-child {
         border-bottom-color: transparent;
         margin-bottom: 0px;
@@ -275,6 +280,10 @@
       }
       .link_img {
         width: 140px;
+        @media(max-width: 575px) {
+          width: 100%;
+          margin-bottom: 15px;
+        }
       }
       .card-body {
         padding: 0px 10px;

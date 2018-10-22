@@ -72,6 +72,12 @@
   .item {
     padding: 10px 15px;
     width: 33.3333%;
+    @media(max-width: 991px) {
+      width: 50%;
+    }
+    @media(max-width: 360px) {
+      width: 100%;
+    }
     &:last-child {
       width: 100%;
     }
@@ -163,10 +169,14 @@
   }
 }
 .form-group {
+  .input_info {
+    margin-bottom: 5px;
+  }
   &--flex {
     //border: solid 1px red;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     .form-control {
       //width: 40%;
     }
