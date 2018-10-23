@@ -4101,6 +4101,13 @@ $(document).ready(function() {
         }
     });
 
+    // Editor
+    try {
+        tinymce.init({ selector:'textarea' });
+    }catch (e) {
+        console.log(e.message);
+    }
+
 
 });
 var handleFileSelect = function(event, callback) {
