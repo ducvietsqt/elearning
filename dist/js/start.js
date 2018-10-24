@@ -4103,7 +4103,10 @@ $(document).ready(function() {
 
     // Editor
     try {
-        tinymce.init({ selector:'textarea' });
+        $('textarea[name=info_body]').summernote({
+            tabsize: 2,
+            height: 300
+        });
     }catch (e) {
         console.log(e.message);
     }

@@ -208,8 +208,9 @@
                                         </small>-->
                                     </div>
                                     <div class="form-group">
-                                        <textarea class="form-control" name="info" rows="4"
+                                        <textarea class="form-control" name="info_body" rows="4"
                                                   placeholder="Mô tả" required>Mô tả</textarea>
+                                        <input name="image" type="file" id="upload" class="hidden" onchange="">
                                         <!--<small id="emailHelp" class="form-text text-muted">
 
                                         </small>-->
@@ -253,7 +254,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <textarea class="form-control" rows="4" name="info"
+                                        <textarea class="form-control" rows="4" name="info_body"
                                                   placeholder="Mô tả" required>Mô tả</textarea>
                                         <!--<small id="emailHelp" class="form-text text-muted">
 
@@ -283,7 +284,9 @@
                                     </div>
                                     <div class="form-group">
                                         <textarea class="form-control" rows="4"
-                                                  placeholder="Giới thiệu ngắn về bản thân" name="info" required>Mô tả</textarea>
+                                                  placeholder="Giới thiệu ngắn về bản thân"
+                                                  name="info_body"
+                                                  required>Mô tả</textarea>
                                         <!--<small id="emailHelp" class="form-text text-muted">
 
                                         </small>-->
@@ -318,7 +321,7 @@
                                 <textarea class="form-control"
                                           id="txt_input_introduce"
                                           rows="4"
-                                          name="info"
+                                          name="info_body"
                                           placeholder="Giới thiệu ngắn về bản thân" required>Nội dung câu trả lời</textarea>
                                         <!--<small id="emailHelp" class="form-text text-muted">
 
@@ -371,7 +374,6 @@
                         <a href="#">
                             <img src="images/apple_store.png" alt="">
                         </a>
-
                     </div>
                 </div>
                 <div class="item">
@@ -437,8 +439,10 @@
 <script src="js/start.js"></script>
 <!-- endbuild -->
 <!--<script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>-->
-<script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=f4i8c0h0f5v80afdrrcf287sg187faaymqnk48x6ebaa3lle"></script>
-
+<!--<script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=f4i8c0h0f5v80afdrrcf287sg187faaymqnk48x6ebaa3lle"></script>-->
+<!-- include summernote css/js -->
+<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.css" rel="stylesheet">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 </body>
