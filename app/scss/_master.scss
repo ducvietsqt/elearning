@@ -129,12 +129,21 @@
 .banner {
   //border: solid 1px red;
   position: relative;
+  height: 415px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  @media(max-width: 767px) {
+    height: 285px;
+  }
   .content_banner {
     width: 100%;
     //border: solid 1px blue;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    //position: absolute;
+    //top: 50%;
+    //transform: translateY(-50%);
+
     .caption_banner {
       font-size: 28px;
       color: #fefefe;

@@ -58,7 +58,7 @@
   }
 }
 .text-grat--link {
-  &:hover {
+  &:hover, &.active {
     color: #09a6e0;
   }
 }

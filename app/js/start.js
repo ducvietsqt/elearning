@@ -38,6 +38,17 @@ $(document).ready(function() {
         autoplay: true,
         autoplaySpeed: 2500,
     });
+    $('._slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 25000,
+        fade: true,
+        dots: true,
+        arrows: false,
+    });
+
     $('.list-slider-book').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -187,7 +198,7 @@ $(document).ready(function() {
     // Editor
     try {
         $('textarea[name=info_body]').summernote({
-            tabsize: 2,
+            // tabsize: 2,
             height: 300
         });
     }catch (e) {
