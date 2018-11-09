@@ -2,13 +2,17 @@
   font-size: 25px;
   color: #666666;
   font-weight: bold;
+  @media(max-width: 991px) {
+    font-size: 18px;
+  }
 }
 .ders-thumbnail {
   //border: solid 1px red;
   display: flex;
   align-items: center;
   margin: 15px 0px;
-  @media(max-width: 767px) {
+
+  @media(max-width: 991px) {
     flex-wrap: wrap;
   }
   .author {
@@ -95,11 +99,12 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 30px;
-  @media(max-width: 575px) {
+  @media(max-width: 991px) {
     flex-wrap: wrap;
   }
   .btn-showmore {
     align-self: flex-end;
+    margin-top: 20px;
     @media(max-width: 575px) {
       margin-top: 20px;
     }
@@ -109,6 +114,16 @@
 .left_content {
   //border: solid 1px red;
   flex: 1;
+  .card-deck {
+    &--wrap {
+      .card {
+        @media(max-width: 991px) {
+          width: 100%;
+
+        }
+      }
+    }
+  }
 }
 .right_content {
   //border: solid 1px red;
