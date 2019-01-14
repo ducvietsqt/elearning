@@ -117,13 +117,23 @@
     }
     ._content {
       position: relative;
+      &:before {
+        content: '';
+        //border: solid 1px red;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.3);
+        z-index: 99999;
+        pointer-events: none;
+      }
       img {
         display: block;
         width: 100%;
       }
       .caption_item {
         position: absolute;
-        z-index: 9;
+        z-index: 999999;
         top: 50%;
         transform: translateY(-50%);
         width: 100%;
