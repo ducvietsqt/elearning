@@ -1,2 +1,9 @@
 $tpatch_fonts: '../fonts/';
 $tpatch_image: '../images/';
+
+.desktop-ls {
+  display: none;
+  @media(min-width: 1200px) {
+    display: block;
+  }
+}

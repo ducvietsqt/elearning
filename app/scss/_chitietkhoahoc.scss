@@ -1,0 +1,256 @@
+.title_detail {
+  font-size: 25px;
+  color: #666666;
+  font-weight: bold;
+  @media(max-width: 991px) {
+    font-size: 18px;
+  }
+}
+.ders-thumbnail {
+  //border: solid 1px red;
+  display: flex;
+  align-items: center;
+  margin: 15px 0px;
+
+  @media(max-width: 991px) {
+    flex-wrap: wrap;
+  }
+  .author {
+    font-size: 15px;
+    color: #09a6e0;
+    margin-right: 20px;
+  }
+  .card-text {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    .point {
+      margin: 0px;
+    }
+  }
+  .drs-member {
+    color: #888888;
+    font-size: 15px;
+    font-weight: bold;
+    margin-right: 20px;
+  }
+}
+.img_dt {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.bold-ders {
+  color: #666666;
+  font-size: 20px;
+  margin: 10px 0px;
+  text-transform: capitalize;
+  &.text-small {
+    font-size: 15px;
+    color: #888888;
+    margin-bottom: 20px;
+    margin-top: 30px;
+  }
+}
+.text-ders {
+  color: #666666;
+  font-size: 15px;
+}
+.dot_start {
+  padding-left: 15px;
+}
+.info_dt {
+  border-bottom: solid 1px #e8e9eb;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+.coach_author {
+  //border: solid 1px red;
+  display: flex;
+  align-items: center;
+
+  .rounded-circle {}
+  .info {
+    padding-left: 15px;
+    .name {
+      font-size: 20px;
+      text-transform: uppercase;
+      color: #09a6e0;
+      font-weight: bold;
+    }
+    .card-text {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      .point {
+        width: 100%;
+      }
+    }
+  }
+}
+.btn-showmore {
+  font-size: 20px;
+  color: #09a6e0;
+  text-transform: uppercase;
+  border-color: #09a6e0;
+}
+.box-coach {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  @media(max-width: 991px) {
+    flex-wrap: wrap;
+  }
+  .btn-showmore {
+    align-self: flex-end;
+    margin-top: 20px;
+    @media(max-width: 575px) {
+      margin-top: 20px;
+    }
+  }
+}
+
+.left_content {
+  //border: solid 1px red;
+  flex: 1;
+  .card-deck {
+    &--wrap {
+      .card {
+        @media(max-width: 991px) {
+          width: 100%;
+
+        }
+      }
+    }
+  }
+}
+.right_content {
+  //border: solid 1px red;
+  width: 380px;
+
+}
+.content_detail {
+  margin: 0px -15px;
+  @media(max-width: 767px) {
+    flex-wrap: wrap;
+  }
+  .left_content {
+    padding: 0px 15px;
+    .card-deck--wrap .card {
+      @media(max-width: 767px) {
+        width: calc(50% - 30px);
+      }
+      @media(max-width: 575px) {
+        width: 100%;
+        margin: 0px;
+        margin-bottom: 30px;
+      }
+
+    }
+  }
+  .right_content {
+    padding: 0px 15px;
+    @media(max-width: 767px) {
+      //border: solid 1px red;
+      width: 100%;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  }
+}
+.title_price {
+  font-size: 30px;
+  color: #09a6e0;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.btn-link {
+  font-size: 20px;
+  text-transform: capitalize;
+  border: solid 1px #09a6e0;
+  display: block;
+  margin-bottom: 15px;
+  &:hover, &:focus {
+    border: solid 1px #09a6e0;
+    text-decoration: none;
+
+  }
+  &--addcard {
+    background: #09a6e0;
+    color: #fff;
+  }
+  &--purchase {
+    color: #09a6e0;
+  }
+}
+.list-info-style {
+  float: left;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+  .item {
+    //border: solid 1px red;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+    img {
+      margin-right: 10px;
+    }
+    span {
+      color: #888888;
+      font-size: 15px;
+    }
+  }
+}
+.input-group {
+  &--discount {
+    margin-bottom: 30px;
+    .form-control {
+      border-color: #c4cbce;
+      border-right-color: transparent;
+    }
+    .input-group-prepend {
+      .btn {
+        font-size: 15px;
+        color: #fff;
+        background: #09a6e0;
+        border-color: #09a6e0;
+      }
+    }
+  }
+}
+.link-social {
+  float: left;
+  width: 100%;
+  margin-bottom: 30px;
+  h6 {
+    color: #666666;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  &--link {
+    display: flex;
+    justify-content: center;
+    a {
+      margin: 0px 5px;
+    }
+  }
+}
+
+.shadow-box {
+  border: solid 1px #bbbbbb;
+  margin-bottom: 25px;
+  padding: 15px 15px;
+  float: left;
+  width: 100%;
+  box-shadow: 4px 10px 16px 0px rgba(0,0,0,0.1);
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}

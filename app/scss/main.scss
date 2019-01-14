@@ -7,6 +7,13 @@
 /*component*/
 /*page*/
 @import "home";
+@import "khoahoc";
+@import "chitietkhoahoc";
+@import "quanlykhoahoc";
+@import "teacher";
+@import "modal";
+@import "forum";
+@import "taokhoahoc";
 
 html {
     -webkit-font-smoothing: antialiased;
@@ -33,4 +40,8 @@ button {
     &:focus {
         outline: none !important;
     }
+}
+
+.note-popover.popover {
+    display: none !important;
 }

@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Els</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400,700,700i&amp;subset=vietnamese"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+<div id="page">
+    <div class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light navbar--page">
+                <a class="navbar-brand" href="#">
+                    <img src="images/logo.png" alt=""/>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="my-2 my-lg-0 mr-auto">
+                        <div class="d-flex justify-content-start">
+                            <button class="btn btn_flex">
+                                <img src="images/icon_danhmuc.png" alt=""/>
+                                Danh mục
+                            </button>
+                            <form class="form-inline form_search">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm khoá học"
+                                       aria-label="Search">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                                    <img src="images/icon_search.png" alt=""/>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <ul class="navbar-nav nav_head">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">
+                                <img src="images/icon_lock.png" alt=""/>
+                                Kích hoạt khoá học
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="images/icon_card.png" alt=""/>
+                                <sup>
+                                    <span class="badge badge-danger">5</span>
+                                </sup>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="images/icon_notifi.png" alt=""/>
+                                <sup>
+                                    <span class="badge badge-danger">5000</span>
+                                </sup>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="modal" data-target="#modal_page_signup">
+                                Đăng ký
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="modal" data-target="#modal_page_signin">
+                                Đăng nhập
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="main">
+        <!-- Modal -->
+        <div class="modal fade" id="modal_page_signin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-dialog--page" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title modal-title--page" id="exampleModalLabel">
+                            <span>Đăng nhập</span>
+                        </h5>
+                        <button type="button" class="close close--modal" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">
+                                <img src="images/close.png" alt="">
+                            </span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="box-auth-social">
+                            <p class="title-auth-small">Đăng nhập thông qua tài khoản</p>
+                            <div class="social-auth">
+                                <a href="#"><img src="images/link.png" alt=""></a>
+                                <a href="#"><img src="images/face.png" alt=""></a>
+                                <a href="#"><img src="images/gg_plus.png" alt=""></a>
+                            </div>
+                            <p class="line_middle"><span>Hoặc</span></p>
+                        </div>
+
+                        <form class="form-auth" id="form_signin">
+                            <div class="form-group">
+                                <input type="email" class="form-control"
+                                       id="txt_input_signin_email" placeholder="Email" name="email" required>
+                                <!--<small id="emailHelp" class="form-text text-muted">
+
+                                </small>-->
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control"
+                                       id="txt_input_signin_password" placeholder="Password" name="password" required>
+                                <!--<small id="emailHelp" class="form-text text-muted">
+
+                                </small>-->
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm">
+                                        <div class="form-check form-check--custom">
+                                            <input class="form-check-input check-custom" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">
+                                                <div class="mark_check">
+                                                    <span class="mark_check--active"></span>
+                                                </div>
+                                                Duy trì đăng nhập
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm">
+                                        <p class="text-right">Quên mật khẩu?</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn--full">Đăng nhập</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modal_page_signup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-dialog--page" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title modal-title--page">
+                            <span>Đăng ký</span>
+                        </h5>
+                        <p class="modal-title modal-title--small">
+                            Vui lòng điền đầy đủ thông tin vào các ô trống.
+                        </p>
+                        <button type="button" class="close close--modal" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">
+                                <img src="images/close.png" alt="">
+                            </span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-auth" id="form-signup">
+                            <div class="row">
+                                <div class="col-sm">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control"
+                                               id="txt_input_name"
+                                               aria-describedby="emailHelp" placeholder="Họ & Tên" name="full_name" required>
+                                        <!--<small id="emailHelp" class="form-text text-muted">
+                                        </small>-->
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <div class="form-group">
+                                        <select class="custom-select"  name="gender" required>
+                                            <option value="">Giới Tính</option>
+                                            <option value="1">Nam</option>
+                                            <option value="2">Nữ</option>
+                                            <option value="3">Thủ Đức</option>
+                                        </select>
+                                        <!--<small id="emailHelp" class="form-text text-muted">
+                                        </small>-->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control"
+                                       id="txt_input_phone"
+                                       aria-describedby="emailHelp" placeholder="Số Điện Thoại"  name="phone_number" required>
+                                <!--<small id="emailHelp" class="form-text text-muted">
+
+                                </small>-->
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control"
+                                       id="txt_input_email" placeholder="Email"  name="email" required>
+                                <!--<small id="emailHelp" class="form-text text-muted">
+
+                                </small>-->
+                            </div>
+                            <div class="form-group">
+                                <input type="date" class="form-control"
+                                       id="txt_input_date" placeholder="Ngày sinh"  name="date_of_birth" required>
+                                <!--<small id="emailHelp" class="form-text text-muted">
+
+                                </small>-->
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control"
+                                          id="txt_input_adress" placeholder="Địa Chỉ"  name="address" required></textarea>
+                                <!--<small id="emailHelp" class="form-text text-muted">
+
+                                </small>-->
+                            </div>
+                            <div class="row">
+                                <div class="col-sm">
+                                    <div class="form-group">
+                                        <select class="custom-select" name="district" required>
+                                            <option value="">Quận/Huyện</option>
+                                            <option value="1">Tân Bình</option>
+                                            <option value="2">Thủ Đức</option>
+                                            <option value="3">Quận 1</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <div class="form-group">
+                                        <select class="custom-select" name="provin" required>
+                                            <option value="">Tỉnh/Thành Phố</option>
+                                            <option value="1">Hồ Chí Minh</option>
+                                            <option value="2">Hà Nội</option>
+                                            <option value="3">Đà Nẵng</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!--<small id="emailHelp" class="form-text text-muted">
+
+                                </small>-->
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control"
+                                          id="txt_input_introduce"
+                                          rows="4"
+                                          placeholder="Giới thiệu ngắn về bản thân" name="info" required></textarea>
+                                <!--<small id="emailHelp" class="form-text text-muted">
+
+                                </small>-->
+                            </div>
+                            <button type="submit" class="btn btn-primary btn--full">Đăng Ký</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="gray inset">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb breadcrumb--home breadcrumb--transparent">
+                        <li class="breadcrumb-item font-weight-bold">
+                            <a href="#">
+                                <img src="images/icon_home.png" alt="">
+                                Trang chủ
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item"><a href="#">Danh sách khóa học</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Khóa học chi tiết</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="container">
+                <div class="d-flex content_detail">
+                    <div class="left_content">
+                        <h2 class="title_detail">
+                            Landing Page Design & Conversion Rate Optimization 2017
+                        </h2>
+                        <div class="ders-thumbnail">
+                            <p class="author">Giảng viên</p>
+                            <div class="card-text card-text--rating">
+                                <p class="rating">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </p>
+                                <p class="point">4.9 (7,949 rating)</p>
+                            </div>
+                            <p class="drs-member">30 Học viên tham gia khóa học</p>
+                        </div>
+                        <img class="img_dt" src="images/img_detail.jpg" alt="">
+                        <div class="info_dt">
+                            <p class="bold-ders font-weight-bold">Giới thiệu</p>
+                            <p class="text-ders">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt
+                                ut
+                                labore
+                                et dolore magna aliquavLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua
+                            </p>
+                            <p class="bold-ders font-weight-bold">Mục tiêu môn học</p>
+                            <p class="text-ders">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt
+                                ut
+                                labore
+                                et dolore magna aliquavLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                            <p class="bold-ders font-weight-bold">
+                                Yêu cầu
+                            </p>
+                            <p class="text-ders dot_start">* Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                sed do
+                                eiusmod.</p>
+                            <p class="text-ders dot_start">* Tempor incididunt ut labore et dolore magna aliquav.</p>
+                            <p class="text-ders dot_start">* Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                sed do
+                                eiusmod.</p>
+                            <p class="text-ders dot_start">
+                                * Tempor incididunt ut labore et dolore magna aliquav
+                            </p>
+                            <p class="text-ders dot_start">
+                                * Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                eiusmod.
+                            </p>
+                            <p class="text-ders dot_start">
+                                * Tempor incididunt ut labore et dolore magna aliquav.
+                            </p>
+                            <p class="bold-ders font-weight-bold">Nội dung chương trình</p>
+                            <p class="text-ders">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt
+                                ut
+                                labore
+                                et dolore magna aliquavLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua
+                            </p>
+                            <br/>
+                            <p class="text-ders">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt
+                                ut
+                                labore
+                                et dolore magna aliquavLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                eiusmod
+                                tempor incididunt ut labore et dolore magna aliquaLorem ipsum dolor sit amet,
+                                consectetur
+                                adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                aliquavLorem
+                                ipsum
+                                dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                et
+                                dolore
+                                magna aliqua
+                            </p>
+                            <br/>
+                            <p class="text-ders">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt
+                                ut
+                                labore
+                                et dolore magna aliquavLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua
+                            </p>
+                        </div>
+
+                        <p class="bold-ders font-weight-bold">Thông tin giảng viên</p>
+                        <div class="box-coach">
+                            <div class="coach_author">
+                                <img class="rounded-circle" src="images/mb1.png" alt=""/>
+                                <div class="info">
+                                    <p class="name">Chu Tử Du</p>
+                                    <div class="card-text card-text--rating">
+                                        <p class="rating">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </p>
+                                        <p class="point">4.9 (7,949 rating)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-showmore">Xem thông tin</button>
+                        </div>
+                        <div class="text-ders inf-ders">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliquavLorem ipsum dolor sit amet, consectetur adipisicing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </div>
+                        <p class="bold-ders text-small font-weight-bold">Môn học tham gia giảng dạy: 3</p>
+                        <div class="card-deck card-deck--wrap card-deck--marketing">
+                            <div class="card" data-toggle="popover" data-html=true>
+                                <a class="link_img" href="#">
+                                    <img class="card-img-top" src="images/card_mh2.jpg" alt="Card image cap">
+                                </a>
+                                <div class="card_sale">
+                                    <img src="images/sale.png" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <a href="#">Complete Guide to Tensor Flow for Deep...</a>
+                                    </h5>
+                                    <p class="card-text">
+                                        <small class="text-muted">Captain</small>
+                                    </p>
+                                    <div class="card-text card-text--rating">
+                                        <p class="rating">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </p>
+                                        <p class="point">4.9 (7,949)</p>
+                                    </div>
+                                    <div class="card-text card-price">
+                                        <p class="old">699,000đ</p>
+                                        <p class="discount">499,000đ</p>
+                                    </div>
+                                </div>
+                                <div class="add_card">
+                                    <div class="head">
+                                        <div class="_avatar">
+                                            <img src="images/mb1.png" alt=""/>
+                                        </div>
+                                        <div class="_info">
+                                            <p>Chu Tử Du</p>
+                                            <a href="#">Profile</a>
+                                        </div>
+                                    </div>
+                                    <p class="_title">
+                                        <a href="#">
+                                            Complete Guide to Tensor Flow for Deep...
+                                        </a>
+                                    </p>
+                                    <div class="info_learn">
+                                        <div class="item">
+                                            <img src="images/icon_num.png" alt=""/>
+                                            Số bài học (30)
+                                        </div>
+                                        <div class="item">
+                                            <img src="images/icon-time.png" alt=""/>
+                                            120 giờ học
+                                        </div>
+                                    </div>
+                                    <p class="ders_hover">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua
+                                    </p>
+                                    <p class="dot">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua
+                                    </p>
+                                    <p class="dot">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                    </p>
+                                    <a href="#" class="btn btn_card">
+                                        Add To Card
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card" data-toggle="popover" data-html=true>
+                                <a class="link_img" href="#">
+                                    <img class="card-img-top" src="images/card_mh3.jpg" alt="Card image cap">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <a href="#">Complete Guide to Tensor Flow for Deep...</a>
+                                    </h5>
+                                    <p class="card-text">
+                                        <small class="text-muted">Captain</small>
+                                    </p>
+                                    <div class="card-text card-text--rating">
+                                        <p class="rating">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </p>
+                                        <p class="point">4.9 (7,949)</p>
+                                    </div>
+                                    <div class="card-text card-price">
+                                        <p class="discount">499,000đ</p>
+                                    </div>
+                                </div>
+                                <div class="add_card">
+                                    <div class="head">
+                                        <div class="_avatar">
+                                            <img src="images/mb1.png" alt=""/>
+                                        </div>
+                                        <div class="_info">
+                                            <p>Chu Tử Du</p>
+                                            <a href="#">Profile</a>
+                                        </div>
+                                    </div>
+                                    <p class="_title">
+                                        <a href="#">
+                                            Complete Guide to Tensor Flow for Deep...
+                                        </a>
+                                    </p>
+                                    <div class="info_learn">
+                                        <div class="item">
+                                            <img src="images/icon_num.png" alt=""/>
+                                            Số bài học (30)
+                                        </div>
+                                        <div class="item">
+                                            <img src="images/icon-time.png" alt=""/>
+                                            120 giờ học
+                                        </div>
+                                    </div>
+                                    <p class="ders_hover">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua
+                                    </p>
+                                    <p class="dot">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua
+                                    </p>
+                                    <p class="dot">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                    </p>
+                                    <a href="#" class="btn btn_card">
+                                        Add To Card
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card" data-toggle="popover" data-html=true>
+                                <a class="link_img" href="#">
+                                    <img class="card-img-top" src="images/card_mh4.jpg" alt="Card image cap">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <a href="#">Complete Guide to Tensor Flow for Deep...</a>
+                                    </h5>
+                                    <p class="card-text">
+                                        <small class="text-muted">Captain</small>
+                                    </p>
+                                    <div class="card-text card-text--rating">
+                                        <p class="rating">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </p>
+                                        <p class="point">4.9 (7,949)</p>
+                                    </div>
+                                    <div class="card-text card-price">
+                                        <p class="discount">499,000đ</p>
+                                    </div>
+                                </div>
+                                <div class="add_card">
+                                    <div class="head">
+                                        <div class="_avatar">
+                                            <img src="images/mb1.png" alt=""/>
+                                        </div>
+                                        <div class="_info">
+                                            <p>Chu Tử Du</p>
+                                            <a href="#">Profile</a>
+                                        </div>
+                                    </div>
+                                    <p class="_title">
+                                        <a href="#">
+                                            Complete Guide to Tensor Flow for Deep...
+                                        </a>
+                                    </p>
+                                    <div class="info_learn">
+                                        <div class="item">
+                                            <img src="images/icon_num.png" alt=""/>
+                                            Số bài học (30)
+                                        </div>
+                                        <div class="item">
+                                            <img src="images/icon-time.png" alt=""/>
+                                            120 giờ học
+                                        </div>
+                                    </div>
+                                    <p class="ders_hover">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua
+                                    </p>
+                                    <p class="dot">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua
+                                    </p>
+                                    <p class="dot">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                    </p>
+                                    <a href="#" class="btn btn_card">
+                                        Add To Card
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="right_content">
+                        <div class="shadow-box">
+                            <h3 class="title_price">799,000đ</h3>
+                            <a href="#" class="btn btn-link btn-link--addcard">Thêm vào giỏ hàng</a>
+                            <a href="#" class="btn btn-link btn-link--purchase">mua ngay</a>
+                            <div class="list-info-style">
+                                <div class="item">
+                                    <img src="images/icon_start.png" alt="">
+                                    <span>Trình độ: Mới bắt đầu</span>
+                                </div>
+                                <div class="item">
+                                    <img src="images/icon_start.png" alt="">
+                                    <span>Bài học: 37 bài</span>
+                                </div>
+                                <div class="item">
+                                    <img src="images/icon_start.png" alt="">
+                                    <span>Xem trên máy tính, điện thoại, tablet</span>
+                                </div>
+                                <div class="item">
+                                    <img src="images/icon_start.png" alt="">
+                                    <span>Sở hữu mãi mãi</span>
+                                </div>
+                                <div class="item">
+                                    <img src="images/icon_start.png" alt="">
+                                    <span>Cấp chứng nhận hoàn thành</span>
+                                </div>
+                            </div>
+                            <div class="input-group input-group--discount">
+                                <input type="text" class="form-control" id="inlineFormInputGroup"
+                                       placeholder="Mã khuyến mãi">
+                                <div class="input-group-prepend">
+                                    <button class="btn input-group-text">
+                                        áp dụng
+                                    </button>
+                                </div>
+                            </div>
+                            <hr/>
+                            <div class="link-social">
+                                <h6>Chia sẻ</h6>
+                                <div class="link-social--link">
+                                    <a href="#">
+                                        <img src="images/linkin.png" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <img src="images/facebook.png" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <img src="images/google.png" alt="">
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shadow-box">
+                            <h3 class="title_line title_line--small">
+                                Khóa học liên quan
+                            </h3>
+                            <div class="card-deck card-deck--wrap card-deck--marketing card-deck--block">
+                                <div class="card" data-toggle="popover" data-html=true>
+                                    <a class="link_img" href="#">
+                                        <img class="card-img-top" src="images/card_mh1.jpg" alt="Card image cap">
+                                    </a>
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            <a href="#">Complete Guide to Tensor Flow for Deep...</a>
+                                        </h5>
+                                        <div class="card-text card-text--rating">
+                                            <p class="rating">
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star"></span>
+                                                <span class="fa fa-star"></span>
+                                            </p>
+                                        </div>
+                                        <div class="card-text card-price">
+                                            <p class="discount">499,000đ</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card" data-toggle="popover" data-html=true>
+                                    <a class="link_img" href="#">
+                                        <img class="card-img-top" src="images/card_mh2.jpg" alt="Card image cap">
+                                    </a>
+                                    <div class="card_sale">
+                                        <img src="images/sale.png" alt="">
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            <a href="#">Complete Guide to Tensor Flow for Deep...</a>
+                                        </h5>
+                                        <div class="card-text card-text--rating">
+                                            <p class="rating">
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star"></span>
+                                                <span class="fa fa-star"></span>
+                                            </p>
+                                        </div>
+                                        <div class="card-text card-price">
+                                            <p class="discount">499,000đ</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card" data-toggle="popover" data-html=true>
+                                    <a class="link_img" href="#">
+                                        <img class="card-img-top" src="images/card_mh3.jpg" alt="Card image cap">
+                                    </a>
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            <a href="#">Complete Guide to Tensor Flow for Deep...</a>
+                                        </h5>
+                                        <div class="card-text card-text--rating">
+                                            <p class="rating">
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star"></span>
+                                                <span class="fa fa-star"></span>
+                                            </p>
+                                        </div>
+                                        <div class="card-text card-price">
+                                            <p class="discount">499,000đ</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card" data-toggle="popover" data-html=true>
+                                    <a class="link_img" href="#">
+                                        <img class="card-img-top" src="images/card_mh4.jpg" alt="Card image cap">
+                                    </a>
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            <a href="#">Complete Guide to Tensor Flow for Deep...</a>
+                                        </h5>
+                                        <div class="card-text card-text--rating">
+                                            <p class="rating">
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star"></span>
+                                                <span class="fa fa-star"></span>
+                                            </p>
+                                        </div>
+                                        <div class="card-text card-price">
+                                            <p class="discount">499,000đ</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card" data-toggle="popover" data-html=true>
+                                    <a class="link_img" href="#">
+                                        <img class="card-img-top" src="images/card_mh5.jpg" alt="Card image cap">
+                                    </a>
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            <a href="#">Complete Guide to Tensor Flow for Deep...</a>
+                                        </h5>
+                                        <div class="card-text card-text--rating">
+                                            <p class="rating">
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star"></span>
+                                                <span class="fa fa-star"></span>
+                                            </p>
+                                        </div>
+                                        <div class="card-text card-price">
+                                            <p class="discount">499,000đ</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="conten_footer">
+                <div class="item item--logo">
+                    <img class="logo_foo" src="images/logo_footer.png" alt="">
+                    <p class="title text-center">tải ứng dụng mobile</p>
+                    <div class="link_store">
+                        <a href="#">
+                            <img src="images/gg_store.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="images/apple_store.png" alt="">
+                        </a>
+
+                    </div>
+                </div>
+                <div class="item">
+                    <p class="title">
+                        Về chúng tôi
+                    </p>
+                    <a href="#" class="link_map">
+                        Giới thiệu
+                    </a>
+                    <a href="#" class="link_map">
+                        Điều khoản sử dụng
+                    </a>
+                    <a href="#" class="link_map">Quy chế hoạt động</a>
+                    <a href="#" class="link_map">Chính sách bảo mật</a>
+                    <a href="#" class="link_map">Chương trình Affiliate</a>
+                </div>
+                <div class="item">
+                    <p class="title">
+                        thông tin
+                    </p>
+                    <a href="#" class="link_map">
+                        Câu hỏi thường gặp
+                    </a>
+                    <a href="#" class="link_map">
+                        Giải quyết tranh chấp
+                    </a>
+                    <a href="#" class="link_map">Chính sách hoàn học phí</a>
+                </div>
+                <div class="item">
+                    <p class="title">
+                        HOTLINE: <strong>18001090</strong>
+                    </p>
+                    <a class="link_map" href="#">
+                        <img src="images/icon_email.png" alt="">
+                        hotro@info.vn
+                    </a>
+                    <a class="link_map" href="#">
+                        <img src="images/icon_email.png" alt="">
+                        kythuat@info.vn
+                    </a>
+                    <p class="logo_Trade">
+                        <img src="images/bct.png" alt="">
+                    </p>
+
+                </div>
+            </div>
+            <p class="text_copyright">Copyright © 2018 </p>
+        </div>
+    </div>
+</div>
+
+<script src="js/start.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+</body>
+</html>
