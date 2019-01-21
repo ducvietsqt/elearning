@@ -4011,26 +4011,30 @@ $(document).ready(function() {
     var templatePopover = '<div class="popover popover-card" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>';
     var templatePopoverUser = '<div class="popover popover-auth" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>';
     $(function () {
-        $('[data-toggle="popover"].card').popover({
-            trigger: 'manual',
-            placement: 'right',
-            delay: {show: 50, hide: 400},
-            template: templatePopover,
-            animation: false,
-            content: $(this).find('.add_card')[0]
+        $.each( $('[data-toggle="popover"].card'), function( i, val ) {
+            if(!$(val).find('.add_card')[0]) return;
+            var _this = $(val);
+            var _content = _this.find('.add_card')[0];
+            $(val).popover({
+                trigger: 'manual',
+                placement: 'right',
+                delay: {show: 50, hide: 400},
+                template: templatePopover,
+                animation: false,
+                content: _content
 
-        }).on("mouseenter", function (_e) {
-            var _this = this;
-            $(this).popover("show");
-
-        }).on("mouseleave", function () {
-            var _this = this;
-            setTimeout(function () {
-                if (!$(".popover:hover").length) {
-                    $(_this).popover("hide")
-                }
-            }, 100);
+            }).on("mouseenter", function (_e) {
+                _this.popover("show");
+            }).on("mouseleave", function () {
+                setTimeout(function () {
+                    if (!$(".popover:hover").length) {
+                        _this.popover("hide")
+                    }
+                }, 100);
+            });
         });
+
+
 
         $('.user_authenticated .avatar').popover({
             trigger: 'click',
